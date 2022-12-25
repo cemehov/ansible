@@ -1,0 +1,8 @@
+---
+- name: Manage Users
+  hosts: all
+  become: yes
+  become_method: sudo
+
+  roles:
+    - manage_users

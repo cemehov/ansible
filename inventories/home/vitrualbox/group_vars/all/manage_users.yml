@@ -1,0 +1,12 @@
+---
+
+manage_users:
+  - username: ansible
+    password: ''
+    update_password: always
+    use_sudo: yes
+    sudo_nopasswd: yes
+    uid: 2000
+    comment: "DO NOT DELETE USER"
+    ssh_authorized_keys:
+      - 'ssh-ed25519 '

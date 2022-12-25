@@ -1,0 +1,17 @@
+---
+
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: Disable SWAP
+      shell:
+        cmd: |
+          swapoff -a
+      args:
+        executable: /bin/bash
+
+    - name: Remove Swap from fstab
+      mount:
+        name: swap
+        fstype: swap
+        state: absent
