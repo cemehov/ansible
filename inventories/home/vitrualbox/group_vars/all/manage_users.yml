@@ -27,11 +27,11 @@ manage_users_ansibleuser_auth_key: vault! |
 
 manage_users:
   - username: ansibleuser
-    password: {{ manage_users_ansibleuser_pass }}
+    password: "{{ manage_users_ansibleuser_pass }}"
     update_password: always
     use_sudo: yes
     sudo_nopasswd: yes
     uid: 2000
     comment: "DO NOT DELETE USER"
     ssh_authorized_keys:
-      - {{ manage_users_ansibleuser_auth_key }}
+      - "{{ manage_users_ansibleuser_auth_key }}"
