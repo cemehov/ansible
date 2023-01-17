@@ -1,0 +1,12 @@
+---
+manage_yum_repository: 
+  - name: epel
+    baseurl: https://download.example/pub/epel/8/Everything/$basearch
+    gpgcheck: yes
+    enabled: yes
+    gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+  - name: epel-source
+    baseurl: https://download.example/pub/epel/8/Everything/source/tree/
+    gpgcheck: yes
+    enabled: no
+    gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8

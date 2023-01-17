@@ -2,15 +2,15 @@
 k8s_masters:
   hosts:
     master1.home.local:
-    master2.home.local:
-    master3.home.local:
+    # master2.home.local:
+    # master3.home.local:
 
 # Worker nodes
 k8s_workers:
   hosts:
     worker1.home.local:
-    worker2.home.local:
-    worker3.home.local:
+    # worker2.home.local:
+    # worker3.home.local:
 
 k8s_cluster:
   children:

@@ -1,0 +1,8 @@
+---
+- name : manage_basic_packages
+  hosts: all 
+  become: yes
+  vars:
+    - ansible_python_interpreter: /usr/bin/python2
+  roles:
+    - manage_basic_packages

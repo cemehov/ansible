@@ -1,0 +1,21 @@
+---
+manage_basic_packages_install:
+  - nano
+  - tmux
+  - mc
+  - unzip
+  - rsync
+  - jq
+  - htop
+  - ncdu
+  - vim
+  - bash-completion
+  - bash-completion-extras
+  - rclone
+  - fuse
+  - tree
+  - python2
+  - python3
+  - curl
+  - wget
+  - bind-utils
