@@ -26,11 +26,11 @@ manage_users_kubeadm_auth_key: vault! |
 
 manage_users_for_group:
   - username: kubeadm
-    password: {{ manage_users_kubeadm_pass }}
+    password: "{{ manage_users_kubeadm_pass }}"
     update_password: always
     use_sudo: yes
     sudo_nopasswd: yes
     uid: 5035
     comment: "DO NOT DELETE USER"
     ssh_authorized_keys:
-      - {{ manage_users_kubeadm_auth_key }}
+      - "{{ manage_users_kubeadm_auth_key }}"
