@@ -1,0 +1,28 @@
+---
+- name: The open port checker
+  hosts: all
+  become: yes
+
+  vars:
+    check_hosts:
+    - ya.ru
+      port:
+      - 80
+      - 443
+    - mail.ru
+      port:
+      - 80
+      - 443
+
+
+  tasks:
+  - name: Check all port numbers are accessible from current host
+    wait_for:
+      host: "{{ item.0.host }}"
+      port: "{{ item.1 }}"
+      state: started         # Port should be open
+      delay: 0               # No wait before first check (sec)
+      timeout: 3             # Stop checking after timeout (sec)
+    ignore_errors: true
+    register: result
+    loop: "{{ check_hosts | subelements('port') }}"
