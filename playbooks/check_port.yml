@@ -5,11 +5,11 @@
 
   vars:
     check_hosts:
-    - ya.ru
+    - host: "ya.ru"
       port:
       - 80
       - 443
-    - mail.ru
+    - host: "mail.ru"
       port:
       - 80
       - 443
